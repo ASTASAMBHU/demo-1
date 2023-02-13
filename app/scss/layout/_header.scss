@@ -1,0 +1,96 @@
+.top-header{
+    padding: 2.6rem 0;
+    .right-menu{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li{
+            margin-right: 4rem;
+            a{
+                font-size: 2rem;
+                color: $gray-dark-color;
+                &:active,
+                &:visited,&:hover{
+                    color: $gray-dark-color;
+                }
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            .dropdown{
+                button{
+                    background-color: transparent;
+                    font-size: 1.8rem;
+                    padding: 0;
+                    color: $gray-dark-color;
+                    border: none;
+                }
+                .dropdown-toggle::after{
+                    position: relative;
+                    top: 1rem;
+                    left: .6rem;
+                    border: 0;
+                    background-image: url('../images/downarrow.svg');
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    // background-attachment:fixed;
+                    background-repeat: no-repeat;
+                    
+                    background-size: contain;
+                }
+                .dropdown-menu{
+                    li{
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+.bottom-header{
+    background-color: $violet-light-color;
+    padding: 3.6rem 0 2.7rem 0;
+    .container{
+        .filter-top{
+            border-bottom: 1px solid rgba(255,255,255,.5);
+            .podcasts-header{
+                color: $white-color;
+                font-size: 7rem;
+                font-family: $secondary-font-medium;
+
+                @include breakpoint(desktop-max) {
+                    @include font-size(4rem);
+                }
+            }
+        }
+        .filter-bottom{
+            color: $white-color;
+            margin-top: 2.2rem;
+            .filter-heading{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                font-family: $primary-font-semibold;
+            }
+            .filter-data{
+                .filter-heading{
+                    .filter-value{
+                        display: inline-block;
+                        margin-left: 1rem;
+                        font-family: $primary-font-regular;
+                        border: 1px solid $white-color;
+                        border-radius: 4rem;
+                        padding: .9rem 1.7rem;
+                    }
+                    &:not(:last-child){
+                        border-right: 1px solid $white-color;
+                        padding-right: 1.9rem;
+                        margin-right: 1.9rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
